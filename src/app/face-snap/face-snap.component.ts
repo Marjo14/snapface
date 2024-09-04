@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FaceSnap } from '../models/face-snap';
-import { DatePipe, LowerCasePipe, NgClass, NgStyle, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe, LowerCasePipe, NgClass, NgStyle, PercentPipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-face-snap',
@@ -12,6 +12,8 @@ import { DatePipe, LowerCasePipe, NgClass, NgStyle, TitleCasePipe, UpperCasePipe
     LowerCasePipe,
     TitleCasePipe,
     DatePipe,
+    PercentPipe,
+    CurrencyPipe,
   ],
   templateUrl: './face-snap.component.html',
   styleUrl: './face-snap.component.scss'
@@ -21,6 +23,7 @@ export class FaceSnapComponent implements OnInit {
   
   snapButtonText!: string;
   userHasSnapped!: boolean;
+  myCurrency : number = 33.67;
 
   ngOnInit() {
     this.snapButtonText = 'Oh Snap!';

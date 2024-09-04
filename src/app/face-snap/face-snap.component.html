@@ -1,4 +1,5 @@
 <div class="face-snap-card"[ngClass]="{snapped: userHasSnapped}">
+    <h1> {{myCurrency | currency: 'EUR' }} </h1>
     <h2>{{ faceSnap.title | titlecase}}</h2>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{ faceSnap.description }}</p>
